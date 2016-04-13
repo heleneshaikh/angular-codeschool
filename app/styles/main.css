@@ -1,0 +1,15 @@
+
+
+.ng-valid.ng-dirty {
+  border-color: forestgreen;
+
+}
+
+.ng-invalid.ng-dirty {
+  border-color: red;
+
+}
+
+li {
+  list-style-type: none;
+}

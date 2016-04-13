@@ -1,0 +1,25 @@
+<ul>
+  <h4>Reviews</h4>
+  <li ng-repeat="review in product.reviews">
+    <blockquote>
+      <b>Stars: {{review.stars}}</b>
+      {{review.body}}
+      <cite>By: {{review.author}}</cite>
+    </blockquote>
+  </li>
+</ul>
+<form name="reviewForm" ng-submit="addReview(product)">
+  <!-- STARS -->
+  <select name="stars" ng-model="review.stars" required>
+    <option value="1">1 star</option>
+    <option value="2">2 stars</option>
+    <option value="3">3 stars</option>
+    <option value="4">4 stars</option>
+  </select>
+  <!-- BODY -->
+  <textarea class="form-control" rows="5" ng-model="review.body"></textarea>
+  <!-- AUTHOR -->
+  <input type="email" ng-model="review.author" required>
+  <input type="submit" value="submit review">
+  <p>{{reviewForm.$valid}}</p>
+</form>
