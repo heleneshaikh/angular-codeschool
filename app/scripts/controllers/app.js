@@ -8,7 +8,7 @@
     var _this = this;
     _this.product = [];
 
-    $http.get('/data/package.json').success(function (data) {
+    $http.get('data/package.json').success(function (data) {
       _this.product = data;
     });
   });
